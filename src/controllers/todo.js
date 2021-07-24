@@ -2,6 +2,7 @@ const db = require("../../models");
 
 exports.getTodos = async (req, res) => {
   try {
+    console.log("Mengakses /todos");
     const result = await db.Todo.findAll({ order: [["createdAt", "ASC"]] });
 
     res.status(200).json({
