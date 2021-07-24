@@ -17,6 +17,9 @@ const db = require("./models");
 
 //routes
 app.use("/api/v1", todo);
+app.use("/", (req, res) => {
+  res.send("<marquee><h1>Sebuah backend oleh sabilimaulana</h1></marquee>");
+});
 
 db.sequelize.sync().then((req) => {
   app.listen(PORT, () => {
