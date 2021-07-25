@@ -1,1 +1,3 @@
-web: npx sequelize db:migrate --env production && node index.js
+release: node_modules/.bin/sequelize db:migrate
+
+web: node index.js
